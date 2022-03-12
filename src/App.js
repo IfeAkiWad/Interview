@@ -5,14 +5,30 @@ import DishForm from './components/DishForm';
 
 const App = () => {
   const [dish, setDish] = useState([
-    {name: 'Injera'},
-    {name: 'Akara'},
-    {name: 'Bandeja Paisa'},
-    {name: 'Tandoori Chicken'}
+    {name: 'Injera',
+    ingredients: [
+      'flour', ' sugar', ' milk'
+    ]
+    },
+    {name: 'Akara',
+    ingredients: [
+      'flour', ' sugar', ' milk'
+    ]
+    },
+    {name: 'Bandeja Paisa',
+    ingredients: [
+      'flour', ' sugar', ' milk'
+    ]
+    },
+    {name: 'Tandoori Chicken',
+    ingredients: [
+      'flour', ' sugar', ' milk'
+    ]
+    }
   ])
 
-  const newDish = (name) => {
-    const newDish = [...dish, { name }]
+  const newDish = (name, ingredients) => {
+    const newDish = [...dish, { name, ingredients: ingredients.split(',') }]
     setDish(newDish)
   }
 
@@ -29,7 +45,7 @@ const App = () => {
         <h2>List of Dishes</h2>
         {/*eslint-disable-next-line array-callback-return*/}
         {dish.map((dish, index) => <Dish key={index} 
-          index={index} 
+          index={index} // <--- used later to delete dish
           dish={dish} 
           removeDish={removeDish} 
         />
