@@ -26,6 +26,8 @@ const App = () => {
     ]
     }
   ])
+ 
+  const currentState = [...dish]
 
   /*The purpose of newDish() is to be able to add to the state of listed dishes with a created a dish */
   const newDish = (name, ingredients) => {
@@ -50,11 +52,12 @@ const App = () => {
         {dish.map((dish, index) => <Dish key={index} 
           index={index} // <--- used later to delete dish
           dish={dish} 
-          removeDish={removeDish} 
+          /*removeDish={removeDish}*/
+          currentState={currentState}
         />
         )}<br />
          <h2>Add New Dish</h2>
-        <DishForm addNewDish={newDish}/>
+        <DishForm /*addNewDish={newDish}*/ currentState={currentState} />
       </div>
     </div>
   );
