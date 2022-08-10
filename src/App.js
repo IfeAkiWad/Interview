@@ -27,10 +27,11 @@ const App = () => {
     }
   ])
  
-  const currentState = [...dish]
+  
 
   /*The purpose of newDish() is to be able to add to the state of listed dishes with a created a dish */
   const newDish = (name, ingredients) => {
+    const currentState = [...dish]
     /*stored in the variable newDish is the established state ([...dish]) */
     const newDish = [currentState, { name, ingredients: ingredients.split(',') }]
     /*add newDish as an argument for setDish to set the state */
