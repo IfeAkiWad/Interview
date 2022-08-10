@@ -6,7 +6,8 @@ const Dish = ({ dish, index, removeDish }) => {
       <div>
         <ul className={'dish-list'}>
           <li>
-            {dish.name}&nbsp;
+            <button className='delete' onClick={() => removeDish(index)}>x</button>&nbsp;
+            <b>Name: </b>{dish.name}
             {/*eslint-disable-next-line array-callback-return*/}
             <ul>
             {dish.ingredients.map((ingr, index) => {
@@ -15,7 +16,6 @@ const Dish = ({ dish, index, removeDish }) => {
               </li>
           })}
             </ul>  
-          <button className='delete' onClick={() => removeDish(index)}>x</button>
           </li>
         </ul>
       </div>
