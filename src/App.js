@@ -57,7 +57,7 @@ const App = () => {
         />
         )}<br />
          <h2>Add New Dish</h2>
-        <DishForm /*addNewDish={newDish}*/ currentState={currentState} />
+        <DishForm addNewDish={newDish} />
       </div>
     </div>
   );
