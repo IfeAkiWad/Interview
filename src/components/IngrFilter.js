@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const IngrFilter = ({ dish }) => {
+const IngrFilter = ({ dish, index }) => {
     console.log(dish, "dish")
     const [filter, setFilter] = useState('')
 
@@ -8,14 +8,20 @@ const IngrFilter = ({ dish }) => {
         setFilter(event.target.value)
     }
 
+    let
+
+    // let mapDishIngr = dish.[index]
+    // console.log(mapDishIngr, "mapped")
     // eslint-disable-next-line array-callback-return
-    let handleFilter = dish.ingredient.filter(dish => {
-        if(filter !== '') {
-            return dish.toLowerCase().includes(filter)
+    let handleFilter = () => {
+       return if() {
+
         }
-    })
+    }
        console.log(handleFilter) 
-    
+
+    // let handleFilter = !filter ? dish : dish.filter((dish, i) => dish[i].includes(filter))
+    // console.log(handleFilter) 
 
 
     return (

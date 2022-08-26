@@ -47,6 +47,7 @@ const App = () => {
   return (
     <div className="App">
       {/* {console.log(dish)} */}
+      < IngrFilter dish={dish} />
       <div>
         <h2>List of Dishes</h2>
         {/*eslint-disable-next-line array-callback-return*/}
