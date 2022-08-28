@@ -8,17 +8,15 @@ const IngrFilter = ({ dish, index }) => {
         setFilter(event.target.value)
     }
 
-    let
+    // let mapFilter = dish.map((dish, i) => {
+    //     return dish.filter(d => d[i].ingredient)
+    // })
 
-    // let mapDishIngr = dish.[index]
-    // console.log(mapDishIngr, "mapped")
-    // eslint-disable-next-line array-callback-return
-    let handleFilter = () => {
-       return if() {
-
-        }
-    }
-       console.log(handleFilter) 
+    // // let mapDishIngr = dish.[index]
+    // // console.log(mapDishIngr, "mapped")
+    // // eslint-disable-next-line array-callback-return
+    // let handleFilter = !filter ? dish : mapFilter.includes(filter)
+    //    console.log(handleFilter) 
 
     // let handleFilter = !filter ? dish : dish.filter((dish, i) => dish[i].includes(filter))
     // console.log(handleFilter) 
